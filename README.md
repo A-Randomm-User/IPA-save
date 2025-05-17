@@ -17,7 +17,3 @@ This Webpage is for downloading IPA quickly without needing to deal with messy s
 
 このウェブページは、煩雑な検索結果に煩わされることなく、IPA を素早くダウンロードするためのものです。
 ————————————————————————————————————————————————————————————————————————————————————————————
-
-Website Link: https://a-randomm-user.github.io/IPA-save/index.html
-
-Deze webpagina is bedoeld om IPA snel te downloaden zonder overladen te worden met zoekresultaten.
