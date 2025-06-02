@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPA文件</title>
-    <link rel="stylesheet" href="./global-variables.css">
+    <link rel="stylesheet" href="./css/global-variables.css">
 </head>
 <body>
     <p>语言</p>
@@ -23,7 +23,7 @@
         前往苹果正版页面 <!--文本内容-->
     </button></a>
     <button style="font-size: 24px"; onclick="toggleDarkMode()">切换主题</button>
-    <script src="darkmode.js"></script>
+    <script src="Javascript/darkmode.js"></script>
 
     <h1>欢迎来到砸壳版IPA</h1>
 
@@ -53,6 +53,24 @@
         这里什么都没有呢~
     </p>
 
-    
+<!-- 弹窗按钮 -->
+  <button onclick="openPopup()">关于</button>
+
+<!-- 弹窗 -->
+  <div id="myPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>关于</h2>
+      <p>
+      本页面旨在帮助您直接下载 IPA 文件，无需搜索网络。这是一种简单快捷的获取所需内容的方法。
+    </p>
+    <p>
+      上一次更新： <strong>6月2日2025</strong><br><strong>0001</strong>
+    </p>
+    </div>
+  </div>
+
+  <script src="Javascript/popup.js"></script>
+
 </body>
 </html>
