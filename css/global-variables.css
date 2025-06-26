@@ -48,10 +48,14 @@ html {
   margin: 10% auto;
   padding: 20px;
   background: var(--bg-color);
-  width: 300px;
+  width: 500px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+
+  max-height: 50vh;
+  overflow-y: auto;
 }
+
 
 /* 关闭按钮 */
 .close-btn {
