@@ -116,3 +116,11 @@ body {
 .close-btn:hover {
     color: #000;
 }
+
+@supports not (--css: variables) {
+    /* Fallback styles for browsers that don't support CSS variables */
+    .popup-content {
+        background: #ffffff;
+        color: #000000;
+    }
+}
