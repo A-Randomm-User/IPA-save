@@ -28,9 +28,225 @@ td, th {
     <button class="button-func">
         返回 <!--文本内容-->
     </button></a>
+    <!-- 弹窗按钮 -->
+  <button onclick="openPopup()" class="button-func">更新</button>
+    <!-- 弹窗 -->
+  <div id="myPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>更新</h2>
+      <p style="font-size: 14px;">
+        <h4>What's New in Version 0.2.0</h4>
+        Major version 0.2.0 (first survival update) <br>
+        + New mode! Choose between Survival and Creative mode when creating a map <br>
+        + New blocks; most notably doors, fences and fence gates <br>
+        + Added flying to Creative mode (double tap jump) <br>
+        + Added mobs; sheep and zombies being the first <br>
+        + Day and night in Survival mode, with monsters coming at night... <br>
+        + Gather resources from nature! <br>
+        + Tools for different purposes (digging, attacking.. shearing :))
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.2.1</h4>
+        Minor version 0.2.1 (new controls!) <br>
+        + New optional control scheme; "split touch controls" <br>
+        + Added pigs to survival mode <br>
+        + Flying is changed; ascend/descend by sliding from the center button to the up/down button <br>
+        + More inventory selection slots <br>
+        + Bug fixes; dark tree trunk was impossible to pick up, invisible fences, resource items in the world were always bright, pixelated destruction feedback circle
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.3.0</h4>
+        Major version 0.3.0 (Crafting!) <br>
+        + New crafting UI reachable from [...]Inventory -> [Craft] <br>
+        + Cows and chickens! <br>
+        + Damageable items <br>
+        + Drop items from your selection slots by press and hold <br>
+        + Some resources can only be gathered with specific tools (see crafting descriptions)
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.4.0</h4>
+        Major release 0.4.0 (Chests, beds and creepers) <br>
+        - Chests for storing items! <br>
+        - Beds for skipping to dawn (day and nights are now longer), and set your spawn point to the bed's position. <br>
+        - Creepers and TNT (use flint and steel to ignite)! <br>
+        - Added food. Eat it to restore health. <br>
+        - Farming; wheat, seeds and hoe. <br>
+        - Peaceful mode setting: healing and no monsters. <br>
+        - Trapdoor, new dyes and a few new recipes. <br>
+        + More: close to 20 bug fixes and tweaks, e.g. monsters spawned when bright, client fall damage. <br>
+        * Update 0.4.0 rev 2 <br>
+        - Added support for iPhone 5 resolution <br>
+        - Trapdoor can now be crafted <br>
+        - Added TNT and a new stone brick to creative inventory
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.7.0</h4>
+        0.7.0 <br>
+        - Alpha of Realms servers <br>
+        - Buckets <br>
+        - Fire <br>
+        - Smooth lighting <br>
+        - Spawn eggs <br>
+        - Chat <br>
+        - Egg, milk and cake <br>
+        - Connecting players inventory is now saved on server <br>
+        - New menus
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.7.6</h4>
+        Fixed a couple of issues with Realms
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.9.5</h4>
+        0.9 - biggest update EVER! <br> <br>
+
+        Infinite worlds! <br>
+        Caves! <br>
+        Loads of new blocks and items including Monster Eggs and huge mushroom blocks. <br>
+        Wolves! Tame a loyal companion. <br>
+        Loads of new flowers! So pretty. <br>
+        New mobs, including the spooky endermen and less spooky Mooshrooms. <br>
+        New biomes from the PC version, including mesas, jungles, swamps and extreme hills. <br>
+        Abandoned mineshafts, villages, and many other cool places to explore. <br>
+        A brand-new “interaction” button. Never accidentally punch a sheep again! <br>
+        New feature generation, including lakes, vines and monster rooms. <br>
+        Many bugs fixed, and possibly a few added.
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.10</h4>
+        What’s new in version 0.10 <br> <br>
+
+        0.10 - Prettier, faster, less buggier <br> <br>
+
+        We’ve improved the graphics, increased performance, and killed off heaps of bugs in one massive update. We’ve also stopped baby animals from sinking when they try to swim because that’s just mean. Update and have fun! <br> <br>
+
+        - Loads of bug fixes! <br>
+        - More watery-looking water <br>
+        - Foggier-looking fog <br>
+        - Even more particles than before <br>
+        - Tinted lighting on terrain and mobs <br>
+        - Improved performance on many devices <br>
+        - More fences! More fence gates! Everyone loves fences <br>
+        - Gold mines in Mesa biomes. Get rich quick <br>
+        - Baby animals can now swim without sinking &lt;3 <br>
+        - Play Creative Mode during both the day and night <br>
+        - Lots more cool stuff that you can discover for yourself
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.10.4</h4>
+        What’s new in version 0.10 <br> <br>
+
+        0.10 - Prettier, faster, less buggier <br> <br>
+
+        We’ve improved the graphics, increased performance, and killed off heaps of bugs in one massive update. We’ve also stopped baby animals from sinking when they try to swim because that’s just mean. Update and have fun! <br> <br>
+
+        - Loads of bug fixes! <br>
+        - More watery-looking water <br>
+        - Foggier-looking fog <br>
+        - Even more particles than before <br>
+        - Tinted lighting on terrain and mobs <br>
+        - Improved performance on many devices <br>
+        - More fences! More fence gates! Everyone loves fences <br>
+        - Gold mines in Mesa biomes. Get rich quick <br>
+        - Baby animals can now swim without sinking &lt;3 <br>
+        - Play Creative Mode during both the day and night <br>
+        - Lots more cool stuff that you can discover for yourself
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.12.1</h4>
+        • The Nether and all its inhabitants. Fight Ghasts and make friends with Pigmen <br>
+        • Cross platform play for up to five players between Pocket Edition and Windows 10 <br>
+        • Revamped touch controls, controller support, and a controller mapping screen <br>
+        • Enhanced Weather effects! Accumulating snow and more <br>
+        • Ocelots! Try taming one with a fish <br>
+        • Experience, Anvils, Brewing, and enchantments. Time to up your game, crafter <br>
+        • Golems. We recommend you approach with caution <br>
+        • Flower pots. We recommend you fill them with flowers <br>
+        • Sneaking and sprinting! Express yourself through movement! <br>
+        • Loads of bug fixes that are too boring to list here <br>
+        • Lots, lots more!
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.12.3</h4>
+        What’s New in Version 0.12 <br>
+
+        0.12.3 <br>
+        New Halloween Costume skin pack <br>
+        Bug fixes <br> <br>
+
+        0.12.2 <br>
+        Bug fixes <br> <br>
+
+        0.12.1 <br>
+        The Nether and all its inhabitants. Fight Ghasts and make friends with Pigmen <br> <br>
+
+        Cross platform play for up to five players between Pocket Edition and Windows 10 <br> <br>
+
+        Revamped touch controls, controller support, and a controller mapping screen <br> <br>
+
+        Enhanced Weather effects! Accumulating snow and more <br> <br>
+
+        Ocelots! Try taming one with a fish
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.13.1</h4>
+        - New Holiday Skins! <br>
+        - Various bug fixes. <br> <br>
+
+        What’s New in Version 0.13.0 <br>
+
+        - Basic Redstone Circuits, including Redstone Wire, the first set of Redstone Producers (Daylight Sensors, Pressure Plates, Tripwire Hooks, and more), and the first set of Redstone Consumers (activator rails, note blocks, TNT, Trapdoors, and more). The rest of the Redstone functionality is right around the corner…stay tuned. <br>
+        - Desert Temples! But maybe stay off the roof...can't say we didn't warn you. <br>
+        - Keep zombies out with Spruce, Birch, Jungle, Acacia, and Dark Oak doors. <br>
+        - Cute fluffy crop-eating bunnies! <br>
+        - Biome Settlers Pack, with new skins from the Desert, Tundra & Forest.
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>What's New in Version 0.14.0</h4>
+        - More Redstone components! Comparators, repeaters, dispensers, droppers, hoppers, trapped chests, and various additional Minecart types <br>
+         - Spooky witches and their huts, complete with cauldrons filled with random potions and the ability to dye Armor <br>
+        - Item Frames to display your coolest loot <br>
+        - Slime blocks <br>
+        - Wearable pumpkins <br>
+        - Red sandstone <br>
+        - Improved chicken jockey mobs <br>
+        - 15 new Redstone Specialists skins for your Redstone engineering, mining, rail-riding and TNT-ing!
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>1.2.10 - Feb 7, 2018</h4>
+        What's new in 1.2.10: Various bug fixes!
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>1.2.11 - Mar 8, 2018</h4>
+        What's new in 1.2.11: Various bug fixes!
+    </p>
+    <hr>
+    <p style="font-size: 14px;">
+        <h4>1.2.13 - Apr 3, 2018</h4>
+        What's new in 1.2.13: Various bug fixes!
+    </p>
+    <hr>
+    </div>
+  </div>
+  <script src="Javascript/popup.js"></script>
 <br><br>
 
-<p id="up">最新版本： 1.21.90, 最后更新： 18.6.2025 10:42 AM UTC+8:00</p>
+<p id="up">最新版本： 1.21.93, 最后更新： 20.7.2025 2:18 PM UTC+8:00</p>
 
 <br>
 
@@ -38,6 +254,7 @@ td, th {
 <p>版本</p>
 <a href="#0.1.2">0.1.2 - 0.9.5 ▼</a>
 <a href="#0.10.0">0.10.0 - 0.16.2 ▼</a>
+<a href="#1.0.0">1.0.0 - 1.1.7 ▼</a>
 <p>支持系统</p>
 <a href="#4.3">iOS 4.3 ▼</a>
 <a href="#5.0">iOS 5.0 ▼</a>
@@ -219,8 +436,10 @@ td, th {
         <tr>
             <td>0.7.2</td>
             <td>15703730</td>
-            <td><a href="https://1024terabox.com/s/1KIq21IwZDHmjJ_SbT9kj5Q">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.2.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.7.2.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/1KIq21IwZDHmjJ_SbT9kj5Q">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1YZXwYQWkiVVZi-5iezHs9A?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.2.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457033680126002/Minecraft_PE_0.7.2.ipa?ex=682a7b0a&is=6829298a&hm=854de236b60923ec4c7d531b4673b8ded4cc42126e449daf3426612e4ced814a&">Discord附件</a>
             </td>
             <td>iOS 4.3或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -228,8 +447,10 @@ td, th {
         <tr>
             <td>0.7.3</td>
             <td>16040516</td>
-            <td><a href="https://1024terabox.com/s/1rlOic9iKD59wjVJAQyg9rg">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.3.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.7.3.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/1rlOic9iKD59wjVJAQyg9rg">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1B-0bSUxu9yISklwm9kakdQ?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.3.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457092605771866/Minecraft_PE_0.7.3.ipa?ex=682a7b18&is=68292998&hm=e83265b18f9f35ba07b9b04c898025c8a2cd8fdce902239da88229596774eb83&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -237,8 +458,10 @@ td, th {
         <tr>
             <td id="5.0">0.7.4</td>
             <td>16635657</td>
-            <td><a href="https://1024terabox.com/s/17BPAL7JHYsuZd6TROhUazA">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.4.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.7.4.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/17BPAL7JHYsuZd6TROhUazA">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1ySf2SZfw5REqh81VxETS7w?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.4.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457092979068938/Minecraft_PE_0.7.4.ipa?ex=682a7b18&is=68292998&hm=39af31a67f94720f0b9018f35036963dc95531d2e8533f1bdff6fd31f3c696e9&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -246,8 +469,10 @@ td, th {
         <tr>
             <td>0.7.5</td>
             <td>16783942</td>
-            <td><a href="https://1024terabox.com/s/1YYgUBcyWa00Mfe_od_okcQ">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.5.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.7.5.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/1YYgUBcyWa00Mfe_od_okcQ">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1WN38lNZFZjQrZq13VYqdjg?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.5.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457093389979699/Minecraft_PE_0.7.5.ipa?ex=682a7b18&is=68292998&hm=6347f4c6d2578eca5bc1b75f782315ed54357873301808dba8790aea23b62c06&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -255,8 +480,10 @@ td, th {
         <tr>
             <td>0.7.6</td>
             <td>82823515</td>
-            <td><a href="https://1024terabox.com/s/1U5jDVRPlWs8f6W9e4oI5Ew">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.6.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.7.6.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/1U5jDVRPlWs8f6W9e4oI5Ew">Terabox</a>,
+                <a href="https://pan.baidu.com/s/16oJcbnjk8EVn_KPyJfi5ag?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.7.6.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457093700616192/Minecraft_PE_0.7.6.ipa?ex=682a7b18&is=68292998&hm=063a48b129da43479b1b1d741594d720b2d78aa28c58a7a865896f30806b9768&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -264,8 +491,10 @@ td, th {
         <tr>
             <td>0.8.0</td>
             <td>222182633</td>
-            <td><a href="https://1024terabox.com/s/1YClwzxnG7xMK02YbHzXxHA">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.8.0.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.8.0.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/1YClwzxnG7xMK02YbHzXxHA">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1D9H7JW_4-FGIqXVdn1V6IA?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.8.0.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457094057136189/Minecraft_PE_0.8.0.ipa?ex=682a7b18&is=68292998&hm=5d22d3bff10b97b13491ae0bfd5697881d943a916161a9de0a22c9269b84e435&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -273,8 +502,10 @@ td, th {
         <tr>
             <td>0.8.1</td>
             <td>256022633</td>
-            <td><a href="https://1024terabox.com/s/1dwH-ZCmoNPGv4cCiIcMl8A">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.8.1.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.8.1.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/1dwH-ZCmoNPGv4cCiIcMl8A">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1-CO7meCYAYSxmj5wolA-Dg?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.8.1.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457094434492476/Minecraft_PE_0.8.1.ipa?ex=682a7b18&is=68292998&hm=83043929d6ccbc3c824946808ec711206f29a372c8d2d2e913e28b942104798a&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -282,8 +513,10 @@ td, th {
         <tr>
             <td>0.9.0</td>
             <td>613932834</td>
-            <td><a href="https://1024terabox.com/s/1YnuWnzhPwV3jdKffRQgiFw">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.0.ipa">Github直链</a>
+            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.9.0.plist" id="text">在线安装</a>,
+                <a href="https://1024terabox.com/s/1YnuWnzhPwV3jdKffRQgiFw">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1q5fyMutaG3iYF3NNgs5kEg?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.0.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373457095042535424/Minecraft_PE_0.9.0.ipa?ex=682a7b19&is=68292999&hm=197c921eca3bc129f2336a3f286aa6733b66b102a2c597c6b360628f4a45ad6d&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -291,8 +524,9 @@ td, th {
         <tr>
             <td>0.9.2</td>
             <td>623452661</td>
-            <td><a href="https://1024terabox.com/s/1qEBcqz4eLPXkn588DOBgjQ">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.2.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1qEBcqz4eLPXkn588DOBgjQ">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1TCzwYVKXglSeJgQmyX4azw?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.2.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475550361813073/Minecraft_PE_0.9.2.ipa?ex=682a8c49&is=68293ac9&hm=0956e40ce07870ae0260c096539a3e0efcf82bfaf787aad1ddca5b87046c9e75&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -300,8 +534,9 @@ td, th {
         <tr>
             <td>0.9.4</td>
             <td>633932654</td>
-            <td><a href="https://1024terabox.com/s/1-DWSA5rY7beqfKZlkris4g">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.4.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1-DWSA5rY7beqfKZlkris4g">Terabox</a>,
+                <a href="https://pan.baidu.com/s/1-iD2OiM1VJM6ZOdmwvXRXg?pwd=1234">百度网盘 密码 1234</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.4.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475550672453735/Minecraft_PE_0.9.4.ipa?ex=682a8c49&is=68293ac9&hm=6320a0927dd295b534f827048e35296cc3929b5e0854f84576281329a7273511&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -309,8 +544,8 @@ td, th {
         <tr>
             <td>0.9.5</td>
             <td>644032947</td>
-            <td><a href="https://1024terabox.com/s/1vHDkk39REttkn3CWUtwDvw">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.5.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1vHDkk39REttkn3CWUtwDvw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.9.5.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475551003807815/Minecraft_PE_0.9.5.ipa?ex=682a8c49&is=68293ac9&hm=a6c6a0ae9a97771d0894c202a6e57ebc123fc5688756c7e9f63523f9e39a3c65&">Discord附件</a>
             </td>
             <td>iOS 5.0或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -318,8 +553,8 @@ td, th {
         <tr>
             <td id="0.10.0">0.10.0</td>
             <td id="5.1.1">786522973</td>
-            <td><a href="https://1024terabox.com/s/1d5hTUq8b-eBXJC3S5fRpjw">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.10.0.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1d5hTUq8b-eBXJC3S5fRpjw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.10.0.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475551351930941/Minecraft_PE_0.10.0.ipa?ex=682a8c49&is=68293ac9&hm=702cc89f1c3bdc8ca523cca92049afe8363072277e794b1af50a8d5ef86288b2&">Discord附件</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -327,8 +562,8 @@ td, th {
         <tr>
             <td>0.10.4</td>
             <td>810809294</td>
-            <td><a href="https://1024terabox.com/s/1E-TP3WwUfdRp1bLQ157Niw">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.10.4.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1E-TP3WwUfdRp1bLQ157Niw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.10.4.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475551712509972/Minecraft_PE_0.10.4.ipa?ex=682a8c49&is=68293ac9&hm=47de36729e4985e3ed47f8065bb6857d8ee5613e050822e64906e94165b147c5&">Discord附件</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -336,8 +571,8 @@ td, th {
         <tr>
             <td>0.11.0</td>
             <td>812041628</td>
-            <td><a href="https://1024terabox.com/s/1TyLlJ-wK--04eDM-_Fftiw">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.11.0.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1TyLlJ-wK--04eDM-_Fftiw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.11.0.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475552018563092/Minecraft_PE_0.11.0.ipa?ex=682a8c49&is=68293ac9&hm=c144d9a94770bc474b95f97f95eaa86b12a45d76ef17745e32caaba7b697546f&">Discord附件</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -345,8 +580,8 @@ td, th {
         <tr>
             <td>0.11.1</td>
             <td>812578790</td>
-            <td><a href="https://1024terabox.com/s/1ScIitF3I8JFaNwvrUOXIcw">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.11.1.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1ScIitF3I8JFaNwvrUOXIcw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.11.1.ipa">Github直链</a>,
                 <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475552375341056/Minecraft_PE_0.11.1.ipa?ex=682a8c49&is=68293ac9&hm=f0b9d90caf38c870066df5f9f28cc7b4172f988bd4399571865e70ce1f892758&">Discord附件</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -354,23 +589,25 @@ td, th {
         <tr>
             <td>0.12.1</td>
             <td>812580762</td>
-            <td><a href="https://1024terabox.com/s/1Q0jZ1ik8YA-z2mPK36m27g">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.1.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1Q0jZ1ik8YA-z2mPK36m27g">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.1.ipa">Github直链</a>,
+                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030481254912010/Minecraft_PE_0.12.1.ipa?ex=682c911a&is=682b3f9a&hm=985d7a63e195f227034d64ce30c469253345d658663a564976e9b06a1899f04f&">Discord附件</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
         </tr>
         <tr>
             <td>0.12.2</td>
             <td>813664574</td>
-            <td><a href="https://1024terabox.com/s/1Es2qoNfp_5m4sHjvAjyrwQ">Terabox</a>
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.2.ipa">Github直链</a>
+            <td><a href="https://1024terabox.com/s/1Es2qoNfp_5m4sHjvAjyrwQ">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.2.ipa">Github直链</a>,
+                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030481682600036/Minecraft_PE_0.12.2.ipa?ex=682c911b&is=682b3f9b&hm=2c11fe22c4fc3f77824bb80f3c2fe9dcbd8e6729d20309203805d2cfc76b4d00&">Discord附件</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
         </tr>
         <tr>
             <td>0.12.3</td>
             <td>813923049</td>
-            <td><a href="https://1024terabox.com/s/1C2RP9w5PEs-qBLfamNgd4Q">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1C2RP9w5PEs-qBLfamNgd4Q">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.3.ipa">Github直链</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -378,7 +615,7 @@ td, th {
         <tr>
             <td>0.13.0</td>
             <td>814415574</td>
-            <td><a href="https://1024terabox.com/s/1BMFqPdLH04eA1POmCSJTAA">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1BMFqPdLH04eA1POmCSJTAA">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.13.0.ipa">Github直链</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -386,7 +623,7 @@ td, th {
         <tr>
             <td>0.13.1</td>
             <td>815094582</td>
-            <td><a href="https://1024terabox.com/s/1cPc8M1lNvVGk1DnEtyEQfQ">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1cPc8M1lNvVGk1DnEtyEQfQ">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.13.1.ipa">Github直链</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -394,7 +631,7 @@ td, th {
         <tr>
             <td>0.13.2</td>
             <td>816208701</td>
-            <td><a href="https://1024terabox.com/s/1-ydzeURcG0xnqWl7yJUDNg">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1-ydzeURcG0xnqWl7yJUDNg">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.13.2.ipa">Github直链</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -402,7 +639,7 @@ td, th {
         <tr>
             <td>0.14.0</td>
             <td>816417576</td>
-            <td><a href="https://1024terabox.com/s/1kONenWQB7Lu85kvIL3NhmA">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1kONenWQB7Lu85kvIL3NhmA">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.0.ipa">Github直链</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -410,7 +647,7 @@ td, th {
         <tr>
             <td>0.14.1</td>
             <td>816856807</td>
-            <td><a href="https://1024terabox.com/s/1N1hunejEAW36wKhC_oz--A">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1N1hunejEAW36wKhC_oz--A">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.1.ipa">Github直链</a>
             </td>
             <td>iOS 5.1.1或者更高, iOS 10.3.4或者更低, <b>*不支持iOS11和更高的系统版本</b></td>
@@ -418,7 +655,7 @@ td, th {
         <tr>
             <td id="6.0">0.14.2</td>
             <td>817031176</td>
-            <td><a href="https://1024terabox.com/s/1GMCvPZoPfKdcL63I4cWFIg">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1GMCvPZoPfKdcL63I4cWFIg">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.2.ipa">Github直链</a>
             </td>
             <td>iOS 6.0或者更高</td>
@@ -426,7 +663,7 @@ td, th {
         <tr>
             <td>0.14.3</td>
             <td>817260822</td>
-            <td><a href="https://1024terabox.com/s/1RSPqbbreHes2v0dciYJQwQ">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1RSPqbbreHes2v0dciYJQwQ">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.3.ipa">Github直链</a>
             </td>
             <td>iOS 6.0或者更高</td>
@@ -434,7 +671,7 @@ td, th {
         <tr>
             <td id="8.0">0.15.0</td>
             <td>817621338</td>
-            <td><a href="https://1024terabox.com/s/1lRvyuA2YbS15f4jOD-WFtw">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1lRvyuA2YbS15f4jOD-WFtw">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.0.817621338.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -442,7 +679,7 @@ td, th {
         <tr>
             <td>0.15.0</td>
             <td>817650262</td>
-            <td><a href="https://1024terabox.com/s/1IHOtnz7JXaFDlPEtKMmH1Q">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1IHOtnz7JXaFDlPEtKMmH1Q">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.0.817650262.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -450,7 +687,7 @@ td, th {
         <tr>
             <td>0.15.2</td>
             <td>818030579</td>
-            <td><a href="https://1024terabox.com/s/1wOknbf_FWrv1lpo3SXphww">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1wOknbf_FWrv1lpo3SXphww">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.2.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -458,7 +695,7 @@ td, th {
         <tr>
             <td>0.15.4</td>
             <td>818269188</td>
-            <td><a href="https://1024terabox.com/s/1alcdlyIGTD2R_KEYJDeNzg">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1alcdlyIGTD2R_KEYJDeNzg">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.4.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -466,7 +703,7 @@ td, th {
         <tr>
             <td>0.15.6</td>
             <td>818416822</td>
-            <td><a href="https://1024terabox.com/s/1iEbUdrv3FJsigae-ODnr-A">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1iEbUdrv3FJsigae-ODnr-A">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.6.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -474,7 +711,7 @@ td, th {
         <tr>
             <td>0.15.7</td>
             <td>818662472</td>
-            <td><a href="https://1024terabox.com/s/16-IcZJP1W9gCJQIeQXxzmQ">Terabox</a>
+            <td><a href="https://1024terabox.com/s/16-IcZJP1W9gCJQIeQXxzmQ">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.7.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -482,7 +719,7 @@ td, th {
         <tr>
             <td>0.15.8</td>
             <td>818878159</td>
-            <td><a href="https://1024terabox.com/s/1yYhNQZTPBEqkxoCSRiTN-g">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1yYhNQZTPBEqkxoCSRiTN-g">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.8.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -490,7 +727,7 @@ td, th {
         <tr>
             <td>0.15.9</td>
             <td>818970426</td>
-            <td><a href="https://1024terabox.com/s/1vvmc377-O24HSFUBYyFmUg">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1vvmc377-O24HSFUBYyFmUg">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.9.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -498,7 +735,7 @@ td, th {
         <tr>
             <td>0.15.10</td>
             <td>819101845</td>
-            <td><a href="https://1024terabox.com/s/1EdemJtpEUqxUK3ZZ6KT2QA">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1EdemJtpEUqxUK3ZZ6KT2QA">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.15.10.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -506,7 +743,7 @@ td, th {
         <tr>
             <td>0.16.0</td>
             <td>819299060</td>
-            <td><a href="https://1024terabox.com/s/1P5Bf-UuS0VGGTRYo2yw7cA">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1P5Bf-UuS0VGGTRYo2yw7cA">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.16.0.819299060.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -514,7 +751,7 @@ td, th {
         <tr>
             <td>0.16.0</td>
             <td>819347371</td>
-            <td><a href="https://1024terabox.com/s/1He8SMYeMYY4QNkWlgTg2xw">Terabox</a>
+            <td><a href="https://1024terabox.com/s/1He8SMYeMYY4QNkWlgTg2xw">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.16.0.819347371.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
@@ -536,7 +773,7 @@ td, th {
             <td>iOS 8.0或者更高</td>
         </tr>
         <tr>
-            <td>1.0.0</td>
+            <td id="1.0.0">1.0.0</td>
             <td>819936072</td>
             <td><a href="https://1024terabox.com/s/17_7qfe8i3l0P60aGOyDt2A">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.1.0.0.ipa">Github直链</a>
@@ -636,6 +873,38 @@ td, th {
             <td>822574311</td>
             <td><a href="https://1024terabox.com/s/1nfRMPcxL5T5wdJaqKTSXZw">Terabox</a>,
                 <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.1.1.1.ipa">Github直链</a>
+            </td>
+            <td>iOS 8.0或者更高</td>
+        </tr>
+        <tr>
+            <td>1.1.2</td>
+            <td>822666630</td>
+            <td><a href="https://1024terabox.com/s/1-XW6uYxK8DPsjKqQJnLGHw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.1.1.2.ipa">Github直链</a>
+            </td>
+            <td>iOS 8.0或者更高</td>
+        </tr>
+        <tr>
+            <td>1.1.3</td>
+            <td>822745341</td>
+            <td><a href="https://1024terabox.com/s/1VAznnBgJTw0sb6VQK0ANPw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.1.1.3.ipa">Github直链</a>
+            </td>
+            <td>iOS 8.0或者更高</td>
+        </tr>
+        <tr>
+            <td>1.1.4</td>
+            <td>822888465</td>
+            <td><a href="https://1024terabox.com/s/1zO96h7xQaqclgA4JjiBFEg">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.1.1.4.ipa">Github直链</a>
+            </td>
+            <td>iOS 8.0或者更高</td>
+        </tr>
+        <tr>
+            <td>1.1.5</td>
+            <td>823055413</td>
+            <td><a href="https://1024terabox.com/s/1D6OqXpfOiNWi8_P0FFg_dw">Terabox</a>,
+                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.1.1.5.ipa">Github直链</a>
             </td>
             <td>iOS 8.0或者更高</td>
         </tr>
