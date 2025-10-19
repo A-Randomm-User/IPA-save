@@ -49,176 +49,66 @@ th {
 <br>
 <div id="tableContainer">Loading</div>
 <script>
-async function loadExcel() {
-  try {
-    const response = await fetch('official-minecraftpe.xlsx');
-    const arrayBuffer = await response.arrayBuffer();
-    const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-    const sheet = workbook.Sheets[workbook.SheetNames[0]];
+function loadExcel() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'official-minecraftpe.xlsx', true);
+  xhr.responseType = 'arraybuffer'; // 支持 SheetJS 解析
 
-    // Get whole range
-    const range = XLSX.utils.decode_range(sheet['!ref']);
-    let html = "<table>";
+  xhr.onload = function() {
+    try {
+      var data = new Uint8Array(xhr.response);
+      var workbook = XLSX.read(data, { type: 'array' });
+      var sheet = workbook.Sheets[workbook.SheetNames[0]];
 
-    for (let R = range.s.r; R <= range.e.r; ++R) {
-      html += "<tr>";
-      for (let C = range.s.c; C <= range.e.c; ++C) {
-        const cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
-        const cell = sheet[cellAddress];
-        let cellContent = "";
+      var range = XLSX.utils.decode_range(sheet['!ref']);
+      var html = "<table>";
 
-        if (cell) {
-          cellContent = cell.v ?? "";
+      for (var R = range.s.r; R <= range.e.r; ++R) {
+        html += "<tr>";
+        for (var C = range.s.c; C <= range.e.c; ++C) {
+          var cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+          var cell = sheet[cellAddress];
+          var cellContent = "";
 
-          // http(s)、itms-services、ftp
-          if (
-            typeof cellContent === "string" &&
-            cellContent.match(/^(https?:\/\/|itms-services:\/\/|ftp:\/\/)/i)
-          ) {
-            cellContent = `<a href="${cellContent}" target="_blank">Download</a>`;
+          if (cell) {
+            cellContent = cell.v != null ? cell.v : "";
+
+            // http(s)、itms-services、ftp
+            if (typeof cellContent === "string" &&
+                cellContent.match(/^(https?:\/\/|itms-services:\/\/|ftp:\/\/)/i)) {
+              cellContent = '<a href="' + cellContent + '" target="_blank">Download</a>';
+            }
           }
+
+          html += (R === 0 ? '<th>' : '<td>') + cellContent + (R === 0 ? '</th>' : '</td>');
         }
-
-        html += R === 0
-          ? `<th>${cellContent}</th>`
-          : `<td>${cellContent}</td>`;
+        html += "</tr>";
       }
-      html += "</tr>";
+
+      html += "</table>";
+      document.getElementById("tableContainer").innerHTML = html;
+    } catch (err) {
+      document.getElementById("tableContainer").innerHTML =
+        '<p style="color:red;">Could not parse xlsx: ' + err.message + '</p>';
     }
+  };
 
-    html += "</table>";
-    document.getElementById("tableContainer").innerHTML = html;
-
-  } catch (err) {
+  xhr.onerror = function() {
     document.getElementById("tableContainer").innerHTML =
-      `<p style="color:red;">Could not load xlsx: ${err.message}</p>`;
-  }
+      '<p style="color:red;">Could not load xlsx file.</p>';
+  };
+
+  xhr.send();
 }
 
-loadExcel();
+// 等 DOM 加载完成再执行
+if (window.addEventListener) {
+  window.addEventListener('load', loadExcel, false);
+} else {
+  window.attachEvent('onload', loadExcel);
+}
 </script>
 <table>
-        <tr>
-            <td>0.11.1</td>
-            <td>812578790</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.11.1.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1ScIitF3I8JFaNwvrUOXIcw">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1ftvebLUR0LP3eDUMbbhrJA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.11.1.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1373475552375341056/Minecraft_PE_0.11.1.ipa?ex=682a8c49&is=68293ac9&hm=f0b9d90caf38c870066df5f9f28cc7b4172f988bd4399571865e70ce1f892758&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.12.1</td>
-            <td>812580762</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.12.1.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1Q0jZ1ik8YA-z2mPK36m27g">Terabox</a>,
-                <a href="https://pan.baidu.com/s/13zXnOgz7ImgFBZWOyIqxqw?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.1.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030481254912010/Minecraft_PE_0.12.1.ipa?ex=682c911a&is=682b3f9a&hm=985d7a63e195f227034d64ce30c469253345d658663a564976e9b06a1899f04f&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.12.2</td>
-            <td>813664574</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.12.2.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1Es2qoNfp_5m4sHjvAjyrwQ">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1xSlOcZ0pHcm7I8igdpoTTA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.2.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030481682600036/Minecraft_PE_0.12.2.ipa?ex=682c911b&is=682b3f9b&hm=2c11fe22c4fc3f77824bb80f3c2fe9dcbd8e6729d20309203805d2cfc76b4d00&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.12.3</td>
-            <td>813923049</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.12.3.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1C2RP9w5PEs-qBLfamNgd4Q">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1vOO0uWUFa5a7KqxepWDQuQ?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.12.3.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030482437570680/Minecraft_PE_0.12.3.ipa?ex=682c911b&is=682b3f9b&hm=e782398ada052e5fe34acaac769665f158fd4e3adddc3a910804c074ceab5461&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.13.0</td>
-            <td>814415574</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.13.0.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1BMFqPdLH04eA1POmCSJTAA">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1BL2ZlbUl2h4Iw6qixGM7GQ?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.13.0.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030482781638666/Minecraft_PE_0.13.0.ipa?ex=682c911b&is=682b3f9b&hm=7ce6ca294c7459eed90d3ca2b05968604a1a8dc0f667519f77b22ebfb722eca0&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.13.1</td>
-            <td>815094582</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.13.1.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1cPc8M1lNvVGk1DnEtyEQfQ">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1XGN0jmkxP6lkWWiyEfYXeg?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.13.1.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030483263979531/Minecraft_PE_0.13.1.ipa?ex=682c911b&is=682b3f9b&hm=c4f6d78f35743239255ce0bfdde03b5a87cd21c957308a248ed0be5ab591e573&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.13.2</td>
-            <td>816208701</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.13.2.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1-ydzeURcG0xnqWl7yJUDNg">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1jbahMQ7EsdrJ7WuN2rkY2w?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.13.2.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030483624558703/Minecraft_PE_0.13.2.ipa?ex=682c911b&is=682b3f9b&hm=8ab82a3bd7e4b3cedd2e20b6b37a44d8e148ba66bbac692f07a5b66221c28816&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.14.0</td>
-            <td>816417576</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.14.0.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1kONenWQB7Lu85kvIL3NhmA">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1Egpj2wdSp7jEW5tm_mF4aw?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.0.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030483972821052/Minecraft_PE_0.14.0.ipa?ex=682c911b&is=682b3f9b&hm=1798acdc479c73f5e926010bddf9305d6e161435f0dbb43f0a471505a181234a&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>0.14.1</td>
-            <td>816856807</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.14.1.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1N1hunejEAW36wKhC_oz--A">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1znOJYIBG9tMQe2YO0SNPTg?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.1.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374030484291457075/Minecraft_PE_0.14.1.ipa?ex=682c911b&is=682b3f9b&hm=3b52ff4291d409f95de02c16ba49c84749b19d3b0fde9531d972bd1ba19a9777&">Discord Attachments</a>
-            </td>
-            <td>iOS 5.1.1 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td id="6.0">0.14.2</td>
-            <td>817031176</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.14.2.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1GMCvPZoPfKdcL63I4cWFIg">Terabox</a>,
-                <a href="https://pan.baidu.com/s/11LtJ1MstR6qqrX7YYSST0A?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.2.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374031779115040808/Minecraft_PE_0.14.2.ipa?ex=682c9250&is=682b40d0&hm=45837f20f3e791f8c3ef3f6077c026170debf7b4210cc6f6bc8a7616e6d6d5a7&">Discord Attachments</a>
-            </td>
-            <td>iOS 6.0 or above</td>
-        </tr>
-        <tr>
-            <td>0.14.3</td>
-            <td>817260822</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-minecraftpe-479516143/0.14.3.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1RSPqbbreHes2v0dciYJQwQ">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1lUNp7XUkn7z77WVpmn6iOA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Minecraft-PE-Official/Minecraft.PE.0.14.3.ipa">Github Direct</a>,
-                <a href="https://cdn.discordapp.com/attachments/1373456820290453588/1374031779635138671/Minecraft_PE_0.14.3.ipa?ex=685eab50&is=685d59d0&hm=c35802f05e22e5ff9700e62409b656b357c8781f39f8cc0ffb4d72649460c415&">Discord Attachments</a>
-            </td>
-            <td>iOS 6.0 or above</td>
-        </tr>
         <tr>
             <td id="8.0">0.15.0</td>
             <td>817621338</td>
