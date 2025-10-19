@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swamp Attack</title>
     <link rel="stylesheet" href="./css/global-variables.css">
+    <link rel="icon" href="./images/swampattack.png" type="image/png" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <style>
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -16,6 +19,16 @@ td, th {
   border: 1px solid #696969;
   text-align: left;
   padding: 8px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--bg-color);
+    transition: 
+        background-color var(--transition-time),
+        color var(--transition-time);
 }
 </style>
 </head>
@@ -28,120 +41,69 @@ td, th {
     </button></a>
 <br><br>
 
-<p>Latest Version: 4.4.4, Last Updated: 18.5.2025 10:16 PM UTC+8:00</p>
+<p>Latest Version: 4.6.3, Last Updated: 19.10.2025</p>
 
 <br>
-    <table>
-        <tr>
-            <th>Version</th>
-            <th>IPA ID</th>
-            <th>Download Link for 32-bit</th>
-            <th>Download Link for 64-bit</th>
-            <th>Supported iOS</th>
-        </tr>
-        <tr>
-            <td>1.0</td>
-            <td>70172760</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/jailbroken-swamp-718153412/1.0.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/16fsIsrnH656BlYtM1esB-w">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1XNzM5Abam7ojc13i9bktkw?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033876367839424/Swamp_1.0.ipa?ex=682c9444&is=682b42c4&hm=46caafbf2a99c6828da1a15aa696e00e2888ad7c33bcfb89d34ce4ccd64beaa9&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.1.0.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.1</td>
-            <td>444622658</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/jailbroken-swamp-718153412/1.1.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1EZqIRlOw--qHAc08TBDMYw">Terabox</a>,
-                <a href="https://pan.baidu.com/s/13BPmjbeEMXWts49TcIvkRA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033876804042895/Swamp_1.1.ipa?ex=682c9444&is=682b42c4&hm=5bf8bb392c6a2841b892d64feff23ded01264086e787e7bbf04772e310ec86fa&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.1.1.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.2</td>
-            <td>524402635</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/jailbroken-swamp-718153412/1.2.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1jlcnzambiGqkDeUKbwRCFw">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1iSHKXLtJ8lZ77mvix8buUQ?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033877189922996/Swamp_1.2.ipa?ex=682c9444&is=682b42c4&hm=51025b6425001a537f0c2bc1cea312401bc093ec56049516dd6774286dcec5d2&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.1.2.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.3</td>
-            <td>613833805</td>
-            <td><a href="https://1024terabox.com/s/1_BzMoxoknIg9c6zDPG5WAA">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1fm31Q_6q_DUXLlRCI8PScA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033877655621642/Swamp_1.3.ipa?ex=682c9444&is=682b42c4&hm=fcbc7a01026da72384c764da7483eac80c6a54ba4929ceb4a45fff447a67f7e1&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.1.3.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.4</td>
-            <td>643972962</td>
-            <td><a href="https://1024terabox.com/s/18-cDPJaxLlAoeM4pZ1uPcg">Terabox</a>,
-                <a href="https://pan.baidu.com/s/16IT6pRrNnBPh9BOy3GP02Q?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033878108602440/Swamp_Attack_1.4.ipa?ex=687bae44&is=687a5cc4&hm=2eca0ff08eedfe4cbad33e85436b3e4a4526059e2942382ac908a525351b07a8&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.Attack.1.4.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.5</td>
-            <td>718353320</td>
-            <td><a href="https://1024terabox.com/s/19vhT62RZTB_rZc5u6t_NQg">Terabox</a>,
-                <a href="https://pan.baidu.com/s/12Q4g4QXyXu9IqGkoKYz3ZA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033878649409587/Swamp_Attack_1.5.ipa?ex=687bae44&is=687a5cc4&hm=2ab9e4ff66a39a92574ed54c7c38549227ec9b4f354bc87c8ecb2caf01efbdd4&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.Attack.1.5.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.7</td>
-            <td>811524402</td>
-            <td><a href="https://1024terabox.com/s/13_mmaZu2IYmxM89E3KT06A">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1WVqji2e-n33_8JJA246c5w?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033879031349368/Swamp_Attack_1.7.ipa?ex=687bae45&is=687a5cc5&hm=714f3995e40860b41435c74ddb56a1b3470f355cad87a4fe76b887305cdde20f&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.Attack.1.7.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.8</td>
-            <td>811980233</td>
-            <td><a href="https://1024terabox.com/s/1IzaMeQiWPhKWwvpiuE9cIg">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1VUJAm030hc5mxTxruCA_jA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374025636020228218/1374033879593128077/Swamp_Attack_1.8.ipa?ex=687bae45&is=687a5cc5&hm=ce0533b677b7914ff4f3960794ca0b5186cfc703343cf7f6f9a3521d8e93f2ea&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.Attack.1.8.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-        <tr>
-            <td>1.9</td>
-            <td>812437083</td>
-            <td><a href="https://1024terabox.com/s/1QAoHVZ6X_6JALcZscjfV4g">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1nNQ3UJuV06iFjO71z9BHvw?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Swamp-Attack-Jailbroken/Swamp.Attack.1.9.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 6.0 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-    </table>
+    <div id="tableContainer">Loading</div>
+<script>
+function loadExcel() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'jailbroken-swamp.xlsx', true);
+  xhr.responseType = 'arraybuffer'; // 支持 SheetJS 解析
 
-    
+  xhr.onload = function() {
+    try {
+      var data = new Uint8Array(xhr.response);
+      var workbook = XLSX.read(data, { type: 'array' });
+      var sheet = workbook.Sheets[workbook.SheetNames[0]];
+
+      var range = XLSX.utils.decode_range(sheet['!ref']);
+      var html = "<table>";
+
+      for (var R = range.s.r; R <= range.e.r; ++R) {
+        html += "<tr>";
+        for (var C = range.s.c; C <= range.e.c; ++C) {
+          var cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+          var cell = sheet[cellAddress];
+          var cellContent = "";
+
+          if (cell) {
+            cellContent = cell.v != null ? cell.v : "";
+
+            // http(s)、itms-services、ftp
+            if (typeof cellContent === "string" &&
+                cellContent.match(/^(https?:\/\/|itms-services:\/\/|ftp:\/\/)/i)) {
+              cellContent = '<a href="' + cellContent + '" target="_blank">Download</a>';
+            }
+          }
+
+          html += (R === 0 ? '<th>' : '<td>') + cellContent + (R === 0 ? '</th>' : '</td>');
+        }
+        html += "</tr>";
+      }
+
+      html += "</table>";
+      document.getElementById("tableContainer").innerHTML = html;
+    } catch (err) {
+      document.getElementById("tableContainer").innerHTML =
+        '<p style="color:red;">Could not parse xlsx: ' + err.message + '</p>';
+    }
+  };
+
+  xhr.onerror = function() {
+    document.getElementById("tableContainer").innerHTML =
+      '<p style="color:red;">Could not load xlsx file.</p>';
+  };
+
+  xhr.send();
+}
+
+// 等 DOM 加载完成再执行
+if (window.addEventListener) {
+  window.addEventListener('load', loadExcel, false);
+} else {
+  window.attachEvent('onload', loadExcel);
+}
+</script>
 </body>
 </html>
