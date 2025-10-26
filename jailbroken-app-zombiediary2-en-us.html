@@ -6,6 +6,7 @@
     <title>Zombie Diary2</title>
     <link rel="stylesheet" href="./css/global-variables.css">
     <link rel="icon" href="./images/zombiediary2.png" type="image/png" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <style>
 table {
   font-family: arial, sans-serif;
@@ -34,27 +35,66 @@ td, th {
 <p>Latest Version: 1.0.0, Last Updated: 18.5.2025 10:55 AM UTC+8:00</p>
 
 <br>
-    <table>
-        <tr>
-            <th>Version</th>
-            <th>IPA ID</th>
-            <th>Download Link for 32-bit</th>
-            <th>Download Link for 64-bit</th>
-            <th>Supported iOS</th>
-        </tr>
-        <tr>
-            <td>1.0.0</td>
-            <td>593732652</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/jailbroken-zombiediary2-883583368/1.0.0.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1P60mxcQyweNEr158M08IXQ">Terabox</a>,
-                <a href="https://cdn.discordapp.com/attachments/1374038242340638881/1374038607156740257/Zombie_Diary2_1.0.ipa?ex=682c98ac&is=682b472c&hm=037c1835c37bb0c3077ff0f7d69ce9ba0af89fed38207e99d01480d35da8cb84&">Discord Attachments</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/Zombie-Diary2-Jailbroken/Zombie.Diary2.1.0.ipa">Github Direct</a>
-            </td>
-            <td>Not Supported</td>
-            <td>iOS 4.3 or above, iOS 10.3.4 or below, <b>*Do not support iOS 11 and above!</b></td>
-        </tr>
-    </table>
-    
-    
+<div id="tableContainer">Loading</div>
+<script>
+function loadExcel() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'jailbroken-zombiediary2.xlsx', true);
+  xhr.responseType = 'arraybuffer'; // 支持 SheetJS 解析
+
+  xhr.onload = function() {
+    try {
+      var data = new Uint8Array(xhr.response);
+      var workbook = XLSX.read(data, { type: 'array' });
+      var sheet = workbook.Sheets[workbook.SheetNames[0]];
+
+      var range = XLSX.utils.decode_range(sheet['!ref']);
+      var html = "<table>";
+
+      for (var R = range.s.r; R <= range.e.r; ++R) {
+        html += "<tr>";
+        for (var C = range.s.c; C <= range.e.c; ++C) {
+          var cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+          var cell = sheet[cellAddress];
+          var cellContent = "";
+
+          if (cell) {
+            cellContent = cell.v != null ? cell.v : "";
+
+            // http(s)、itms-services、ftp
+            if (typeof cellContent === "string" &&
+                cellContent.match(/^(https?:\/\/|itms-services:\/\/|ftp:\/\/)/i)) {
+              cellContent = '<a href="' + cellContent + '" target="_blank">Download</a>';
+            }
+          }
+
+          html += (R === 0 ? '<th>' : '<td>') + cellContent + (R === 0 ? '</th>' : '</td>');
+        }
+        html += "</tr>";
+      }
+
+      html += "</table>";
+      document.getElementById("tableContainer").innerHTML = html;
+    } catch (err) {
+      document.getElementById("tableContainer").innerHTML =
+        '<p style="color:red;">Could not parse xlsx: ' + err.message + '</p>';
+    }
+  };
+
+  xhr.onerror = function() {
+    document.getElementById("tableContainer").innerHTML =
+      '<p style="color:red;">Could not load xlsx file.</p>';
+  };
+
+  xhr.send();
+}
+
+// 等 DOM 加载完成再执行
+if (window.addEventListener) {
+  window.addEventListener('load', loadExcel, false);
+} else {
+  window.attachEvent('onload', loadExcel);
+}
+</script>
 </body>
 </html>
