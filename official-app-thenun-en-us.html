@@ -6,6 +6,7 @@
     <title>The Nun</title>
     <link rel="stylesheet" href="./css/global-variables.css">
     <link rel="icon" href="./images/thenun.png" type="image/png" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <style>
 table {
   font-family: arial, sans-serif;
@@ -29,60 +30,66 @@ td, th {
     <button class="button-func">
         Go Back <!--文本内容-->
     </button></a>
-    <!-- 弹窗按钮 -->
-  <button onclick="openPopup()" class="button-func">Updates</button>
-    <!-- 弹窗 -->
-  <div id="myPopup" class="popup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2>Updates</h2>
-    <p style="font-size: 14px;">
-        <h4>1.0.2 - Jul 13, 2018</h4>
-    </p>
-    <hr>
-    <p style="font-size: 14px;">
-        <h4>1.0.6 - Jul 19, 2018 </h4>
-        First version release.
-    </p>
-    </div>
-  </div>
-  <script src="Javascript/popup.js"></script>
-<br><br>
+<div id="tableContainer">Loading</div>
+<script>
+function loadExcel() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'official-thenun.xlsx', true);
+  xhr.responseType = 'arraybuffer'; // 支持 SheetJS 解析
 
-<p>Latest Version: 1.0.7, Last Updated: 22.6.2025 8:07 AM UTC+8:00</p>
+  xhr.onload = function() {
+    try {
+      var data = new Uint8Array(xhr.response);
+      var workbook = XLSX.read(data, { type: 'array' });
+      var sheet = workbook.Sheets[workbook.SheetNames[0]];
 
-<br>
-    <table>
-        <tr>
-            <th>Version</th>
-            <th>IPA ID</th>
-            <th>Download Link</th>
-            <th>Supported iOS</th>
-        </tr>
-        <tr>
-            <td>1.0.2</td>
-            <td>827831581</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-thenun-1410194646/1.0.2.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1_virwlsc8zeIYeo6wwI5kQ">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1BwLetzvrweFR4TjY5YzC1w?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://drive.google.com/file/d/1_sNV0NxLO09tuUbIOHqBn9IDXLN9uhvf/view?usp=drive_link">Google Drive</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/The-Nun-Official/The.Nun.1.0.2.ipa">Github Direct</a>
-            </td>
-            <td>iOS 7.0 or above</td>
-        </tr>
-        <tr>
-            <td>1.0.7</td>
-            <td>827910338</td>
-            <td><a href="itms-services://?action=download-manifest&url=https://a-randomm-user.github.io/IPA-save/onlineDownload/official-thenun-1410194646/1.0.7.plist" id="text">Online Download</a>,
-                <a href="https://1024terabox.com/s/1PDWKiRsjzC43JnLtLVnZvw">Terabox</a>,
-                <a href="https://pan.baidu.com/s/1hJMYtHhXqpnnxttbo3rFwA?pwd=1234">百度网盘 Password 1234</a>,
-                <a href="https://drive.google.com/file/d/1weEiyTenA6jPV6etY_bs619cDYmwT4dR/view?usp=drive_link">Google Drive</a>,
-                <a href="https://github.com/A-Randomm-User/IPA-save/releases/download/The-Nun-Official/The.Nun.1.0.7.ipa">Github Direct</a>
-            </td>
-            <td>iOS 7.0 or above</td>
-        </tr>
-    </table>
+      var range = XLSX.utils.decode_range(sheet['!ref']);
+      var html = "<table>";
 
-    
+      for (var R = range.s.r; R <= range.e.r; ++R) {
+        html += "<tr>";
+        for (var C = range.s.c; C <= range.e.c; ++C) {
+          var cellAddress = XLSX.utils.encode_cell({ r: R, c: C });
+          var cell = sheet[cellAddress];
+          var cellContent = "";
+
+          if (cell) {
+            cellContent = cell.v != null ? cell.v : "";
+
+            // http(s)、itms-services、ftp
+            if (typeof cellContent === "string" &&
+                cellContent.match(/^(https?:\/\/|itms-services:\/\/|ftp:\/\/)/i)) {
+              cellContent = '<a href="' + cellContent + '" target="_blank">Download</a>';
+            }
+          }
+
+          html += (R === 0 ? '<th>' : '<td>') + cellContent + (R === 0 ? '</th>' : '</td>');
+        }
+        html += "</tr>";
+      }
+
+      html += "</table>";
+      document.getElementById("tableContainer").innerHTML = html;
+    } catch (err) {
+      document.getElementById("tableContainer").innerHTML =
+        '<p style="color:red;">Could not parse xlsx: ' + err.message + '</p>';
+    }
+  };
+
+  xhr.onerror = function() {
+    document.getElementById("tableContainer").innerHTML =
+      '<p style="color:red;">Could not load xlsx file.</p>';
+  };
+
+  xhr.send();
+}
+
+// 等 DOM 加载完成再执行
+if (window.addEventListener) {
+  window.addEventListener('load', loadExcel, false);
+} else {
+  window.attachEvent('onload', loadExcel);
+}
+</script>
 </body>
 </html>
