@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft</title>
+    <title>Zombie Diary 2</title>
     <link rel="stylesheet" href="./css/global-variables.css">
-    <link rel="icon" href="./images/minecraftpe.png" type="image/png" />
+    <link rel="icon" href="./images/zombiediary2.png" type="image/png" />
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <style>
   body { font-family: Arial; margin: 20px; }
@@ -48,10 +48,6 @@ th {
     <button class="button-func">
         Go Back <!--文本内容-->
     </button></a>
-    <p>Quick Link:</p>
-    <b>
-    <a href="#1.0.0">1.0.0</a>; <a href="#1.1.0">1.1.0</a>; <a href="#1.2.0">1.2.0</a>
-    </b>
     <div id="buttonContainer">Loading</div>
 
 <hr>
@@ -59,7 +55,7 @@ th {
 <script>
 function loadWorkbook(callback) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'minecraft.xlsx', true);
+  xhr.open('GET', 'zombiediary2.xlsx', true);
   xhr.responseType = 'arraybuffer';
 
   xhr.onload = function() {
